@@ -29,8 +29,8 @@ Machine learning systems are often argued to be be fairer and more impartial in 
 
 ## Problems with explaining decisions
 
-Many machine learning systems (e.g. neural networks) can't really explain their decisions. Although the input and output are known, trying to
-explain why the training caused the network to behave in a certain way can be very difficult. When decisions are questioned by a human it's
+Many machine learning systems (e.g. complex ensemble models) can't really explain their decisions. Although the input and output are known, trying to
+explain why the training caused the model to behave in a certain way can be very difficult. When decisions are questioned by a human it's
 difficult to provide any rationale for how a decision was arrived at.
 
 ## Problems with accuracy

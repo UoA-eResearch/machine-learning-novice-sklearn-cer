@@ -28,17 +28,13 @@ Current maintainers of this lesson are:
 * [Vini Salazar](https://github.com/vinisalazar)
 
 ## Outline
-As determined by the attendees of CarpentryConnect Manchester 2019, the proposed outline of this lesson is as follows:
+As determined by the attendees of CarpentryConnect Manchester 2019, and updated through community feedback, the current outline of this lesson follows a progressive learning path:
 
-### Unsupervised Learning
-#### I. Clustering
-##### 1. Kmeans
-#### II. Dimesionality Reduction
-##### 1. PCA
-##### 2. TSNE
+### 1. Introduction & Getting Started
+- Overview of machine learning concepts
+- Introduction to Scikit-Learn
 
-
-### Supervised Learning
+### 2. Supervised Learning
 
 All models, objectives:
 - What it is;
@@ -46,16 +42,13 @@ All models, objectives:
 - how to evaluate the fit, over/underfitting;
 - computational complexity
 
-
 #### I. Regression
-
 ##### 1. Linear
 ##### 2. Polynomial
 - Overfitting/underfitting
 - Test sets (how and why)
 
 #### II. Classification
-
 ##### 1. Logistic regression
 - Over/underfitting can happen in regression too
 - Accuracy
@@ -63,15 +56,28 @@ All models, objectives:
 - Precision
 - Recall
 
-
 ##### 2. Random Forest
-
-##### 3. Neural Networks
 
 - Evaluation
 - Cross Validation
 
-### Ethics
+### 3. Unsupervised Learning
+#### I. Clustering
+##### 1. Kmeans
+
+### 4. Ensemble Methods & Dimensionality Reduction
+#### I. Ensemble Methods
+- Stacking
+- Bagging  
+- Boosting
+
+#### II. Dimensionality Reduction
+##### 1. PCA
+##### 2. TSNE
+
+### 5. Ethics & Implications
+
+### 6. Learn More
 
 
 ## Authors

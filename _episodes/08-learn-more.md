@@ -21,9 +21,9 @@ The Scikit-Learn [webpage](https://scikit-learn.org/stable/index.html) has a goo
 
 Genetic algorithms are techniques which try to mimic biological evolution. They will learn to solve a problem through a gradual process 
 of simulated evolution. Each generation is mutated slightly and then evaluated with a fitness function. The fittest "genes" will then be selected
-for the next generation. Sometimes this is combined with neural networks to change the networks size structure. 
+for the next generation. Sometimes this is combined with other machine learning models to evolve their structure and parameters. 
 
-This [video](https://www.youtube.com/watch?v=qv6UVOQ0F44) shows a genetic algorithm evolving neural networks to play a video game.
+This [video](https://www.youtube.com/watch?v=qv6UVOQ0F44) shows a genetic algorithm evolving machine learning models to play a video game.
 
 ## Useful Resources 
 
