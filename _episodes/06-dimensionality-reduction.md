@@ -230,7 +230,7 @@ Additionally, if we had run k-means on all 64 dimensions this would likely still
 
 The major drawback of applying t-SNE to datasets is the large computational requirement. Furthermore, hyper-parameter tuning of t-SNE usually requires some trial and error to perfect. 
 
-Our example here is still a relatively simple example of 8x8 images and not very typical of the modern problems that can now be solved in the field of ML and DL. To account for even higher-order input data, neural networks were developed to more accurately extract feature information.
+Our example here is still a relatively simple example of 8x8 images and not very typical of the modern problems that can now be solved in the field of ML and DL. To account for even higher-order input data, more sophisticated feature extraction and modeling techniques have been developed.
 
 
 > ## Exercise: Working in three dimensions
