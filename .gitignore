@@ -9,3 +9,7 @@ _site
 .Rhistory
 .RData
 
+_site/
+.vendor/
+Gemfile.lock
+.bundle/
