@@ -427,7 +427,71 @@ plt.show()
 
 ![Comparison of the regressions of our dataset](../fig/regress_penguin_lin.png)
 
-Congratulations! We've taken our linear regression function and quickly created and trained a new linear regression model on a brand new dataset. Note that this time we have returned our model from the regression function and assigned it to the variable `trained_model`. We can now use this model to predict `bill_depth_mm` values for any given `body_mass_g` values that we pass it.
+Congratulations! We've taken our linear regression function and quickly created and trained a new linear regression model on a brand new dataset. Note that this time we have returned our model from the regression function and assigned it to the variable `trained_model`. 
+
+We can now use this model to predict `bill_depth_mm` values for any given `body_mass_g` values that we pass it.
+
+~~~
+# Recreate (or reuse) the training arrays in the shape expected by scikit-learn
+x_data_1, y_data_1 = pre_process_linear(x_data, y_data)
+
+# Fit a fresh linear regression model
+model = LinearRegression(fit_intercept=True)
+lin_regress = model.fit(x_data_1, y_data_1)
+
+# New body mass to predict
+x = 3500
+x_new = np.array(x).reshape(-1, 1)
+
+pred_y = lin_regress.predict(x_new)   # shape (1,1)
+y_pred_value = float(pred_y[0][0])
+
+print(f"Prediction for body_mass_g = {x}: bill_depth_mm ≈ {y_pred_value:.2f}")
+print(f"Interpretation: On the existing plot this would appear at the point ({x}, {y_pred_value:.2f}).")
+~~~
+{: .language-python}
+
+> ## Exercise: Make more predictions
+>
+> Using the same fitted model (`lin_regress`) above (re‑run that cell first if needed):
+> 1. Predict the bill depth for a penguin with a body mass of 2000 g.  
+> 2. Predict the bill depth for a penguin with a body mass of 6000 g.  
+> 3. Predict the bill depths for three masses at once: 3500 g, 4000 g, and 4500 g.  
+>
+> For each prediction, print the numeric result and a short sentence describing where the point would appear on the existing plot (e.g. “(2000, XX.XX)”).
+>
+> Hint: You only need to reshape your inputs to 2D (e.g. `np.array(2000).reshape(-1,1)` or `np.array([3500,4000,4500]).reshape(-1,1)`).
+> > ## Solution
+> > Run the earlier cell first so `lin_regress` exists. (If you lost the session, you can optionally refit—see commented lines.)
+> > ~~~
+> > # OPTIONAL refit (only if lin_regress is not defined):
+> > # x_data_1, y_data_1 = pre_process_linear(x_data, y_data)
+> > # model = LinearRegression(fit_intercept=True)
+> > # lin_regress = model.fit(x_data_1, y_data_1)
+> >
+> > # (1) Single prediction: 2000 g
+> > x_2000 = np.array(2000).reshape(-1, 1)
+> > pred_2000 = lin_regress.predict(x_2000)
+> > print(f"Prediction for body_mass_g = 2000: bill_depth_mm ≈ {float(pred_2000[0][0]):.2f}")
+> > print(f"Would appear at (2000, {float(pred_2000[0][0]):.2f}).")
+> >
+> > # (2) Single prediction: 6000 g
+> > x_6000 = np.array(6000).reshape(-1, 1)
+> > pred_6000 = lin_regress.predict(x_6000)
+> > print(f"Prediction for body_mass_g = 6000: bill_depth_mm ≈ {float(pred_6000[0][0]):.2f}")
+> > print(f"Would appear at (6000, {float(pred_6000[0][0]):.2f}).")
+> >
+> > # (3) Multiple predictions: 3500, 4000, 4500 g
+> > multi_masses = np.array([3500, 4000, 4500]).reshape(-1, 1)
+> > multi_preds = lin_regress.predict(multi_masses)
+> > for mass, pred in zip(multi_masses.flatten(), multi_preds):
+> >     val = float(pred[0])
+> >     print(f"Prediction for body_mass_g = {mass}: bill_depth_mm ≈ {val:.2f}")
+> >     print(f"Would appear at ({mass}, {val:.2f}).")
+> >
+> {: .solution}
+{: .challenge}
+
 
 Let's provide the model with all of the penguin samples and visually inspect how the linear regression model performs.
 
