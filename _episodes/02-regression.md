@@ -462,13 +462,8 @@ print(f"Interpretation: On the existing plot this would appear at the point ({x}
 >
 > Hint: You only need to reshape your inputs to 2D (e.g. `np.array(2000).reshape(-1,1)` or `np.array([3500,4000,4500]).reshape(-1,1)`).
 > > ## Solution
-> > Run the earlier cell first so `lin_regress` exists. (If you lost the session, you can optionally refit—see commented lines.)
+> > 
 > > ~~~
-> > # OPTIONAL refit (only if lin_regress is not defined):
-> > # x_data_1, y_data_1 = pre_process_linear(x_data, y_data)
-> > # model = LinearRegression(fit_intercept=True)
-> > # lin_regress = model.fit(x_data_1, y_data_1)
-> >
 > > # (1) Single prediction: 2000 g
 > > x_2000 = np.array(2000).reshape(-1, 1)
 > > pred_2000 = lin_regress.predict(x_2000)
@@ -488,10 +483,10 @@ print(f"Interpretation: On the existing plot this would appear at the point ({x}
 > >     val = float(pred[0])
 > >     print(f"Prediction for body_mass_g = {mass}: bill_depth_mm ≈ {val:.2f}")
 > >     print(f"Would appear at ({mass}, {val:.2f}).")
-> >
+> > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
-
 
 Let's provide the model with all of the penguin samples and visually inspect how the linear regression model performs.
 
