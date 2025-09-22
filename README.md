@@ -61,23 +61,22 @@ All models, objectives:
 - Evaluation
 - Cross Validation
 
-### 3. Unsupervised Learning
+### 4. Unsupervised Learning
 #### I. Clustering
 ##### 1. Kmeans
-
-### 4. Ensemble Methods & Dimensionality Reduction
-#### I. Ensemble Methods
-- Stacking
-- Bagging  
-- Boosting
 
 #### II. Dimensionality Reduction
 ##### 1. PCA
 ##### 2. TSNE
 
-### 5. Ethics & Implications
+### 5. Ensemble Methods
+- Stacking
+- Bagging  
+- Boosting
 
-### 6. Learn More
+### 6. Ethics & Implications
+
+### 7. Learn More
 
 
 ## Authors
