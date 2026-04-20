@@ -18,37 +18,15 @@ Classification is a supervised method to recognise and group data objects into a
 
 In this episode we are going to introduce the concept of supervised classification by classifying penguin data into different species of penguins using Scikit-Learn.
 
-## The penguins dataset
-We're going to be using the penguins dataset of Allison Horst, published [here](https://github.com/allisonhorst/palmerpenguins), The dataset contains 344 size measurements for three penguin species (Chinstrap, Gentoo and Adélie) observed on three islands in the Palmer Archipelago, Antarctica.
-
-![*Artwork by @allison_horst*](../fig/palmer_penguins.png)
-
-The physical attributes measured are flipper length, beak length, beak width, body mass, and sex.
-![*Artwork by @allison_horst*](../fig/culmen_depth.png)
-
-In other words, the dataset contains 344 rows with 7 features i.e. 5 physical attributes, species and the island where the observations were made.
-
-~~~
-import seaborn as sns
-
-dataset = sns.load_dataset('penguins')
-dataset.head()
-~~~
-{: .language-python}
-
-Our aim is to develop a classification model that will predict the species of a penguin based upon measurements of those variables.
-
-As a rule of thumb for ML/DL modelling, it is best to start with a simple model and progressively add complexity in order to meet our desired classification performance.
-
-For this lesson we will limit our dataset to only numerical values such as bill_length, bill_depth, flipper_length, and body_mass while we attempt to classify species.
-
-The above table contains multiple categorical objects such as species. If we attempt to include the other categorical fields, island and sex, we might hinder classification performance due to the complexity of the data.
-
 ### Preprocessing our data
 
-Lets do some pre-processing on our dataset and specify our `X` features and `y` labels:
+Lets load up and pre-process our dataset and specify our `X` features and `y` labels:
 
-~~~
+```python
+import seaborn as sns
+
+dataset = sns.load_dataset("penguins")
+
 # Extract the data we need
 feature_names = ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']
 dataset.dropna(subset=feature_names, inplace=True)
@@ -57,8 +35,7 @@ class_names = dataset['species'].unique()
 
 X = dataset[feature_names]
 y = dataset['species']
-~~~
-{: .language-python}
+```
 
 Having extracted our features `X` and labels `y`, we can now split the data using the `train_test_split` function.
 
