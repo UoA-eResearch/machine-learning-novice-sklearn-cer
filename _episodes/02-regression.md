@@ -222,18 +222,26 @@ print(f"Interpretation: On the existing plot this would appear at the point ({x}
 Let's provide the model with all of the penguin samples and visually inspect how the linear regression model performs.
 
 ~~~
-x_data_all, y_data_all = pre_process_linear(dataset["body_mass_g"], dataset["bill_depth_mm"])
+# Prepare the full cleaned dataset as (N, 1) arrays
+x_data_all = np.array(dataset["body_mass_g"]).reshape(-1, 1)
+y_data_all = np.array(dataset["bill_depth_mm"]).reshape(-1, 1)
 
-y_predictions = predict_linear_model(trained_model, x_data_all, y_data_all)
+# Predict with the same model (lin_regress) we trained on the 146-sample subset
+y_predictions_all = lin_regress.predict(x_data_all)
+
+# How well does the model fit on *all* the data?
+error_all = math.sqrt(mean_squared_error(y_data_all, y_predictions_all))
+print("linear error on all data =", error_all)
+
+# Draw the fit as a straight line via two endpoints so it plots cleanly
+x_line = np.array([x_data_all.min(), x_data_all.max()]).reshape(-1, 1)
+y_line = lin_regress.predict(x_line)
 
 plt.scatter(x_data_all, y_data_all, label="all data")
 plt.scatter(x_data, y_data, label="training data")
-
-plt.plot(x_data_all, y_predictions, label="fit")
-plt.plot(x_data_all, y_predictions, "rx", label="predictions")
-
-plt.xlabel("mass g")
-plt.ylabel("depth mm")
+plt.plot(x_line, y_line, "r-", label="linear fit")
+plt.xlabel("body_mass_g")
+plt.ylabel("bill_depth_mm")
 plt.legend()
 plt.show()
 ~~~
