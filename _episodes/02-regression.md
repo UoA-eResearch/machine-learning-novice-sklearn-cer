@@ -47,10 +47,10 @@ We've had a lot of theory so time to start some actual coding!
 
 We're going to be using the penguins dataset of Allison Horst, published [here](https://github.com/allisonhorst/palmerpenguins), The dataset contains 344 size measurements for three penguin species (Chinstrap, Gentoo and Adélie) observed on three islands in the Palmer Archipelago, Antarctica.
 
-![](fig/palmer_penguins.png){alt='Artwork by @allison\_horst'}
+![Artwork by @allison_horst](../fig/palmer_penguins.png)
 
 The physical attributes measured are flipper length, beak length, beak width, body mass, and sex.
-![](fig/culmen_depth.png){alt='Artwork by @allison\_horst'}
+![Artwork by @allison_horst](../fig/culmen_depth.png)
 
 In other words, the dataset contains 344 rows with 7 features i.e. 5 physical attributes, species and the island where the observations were made.
 
@@ -97,7 +97,7 @@ plt.ylabel("depth mm")
 plt.show()
 ```
 
-![](fig/penguin_regression.png){alt='Comparison of the regressions of our dataset'}
+![Scatter plot of penguin body mass versus bill depth](../fig/regress_penguin_lin_a.png)
 
 In this regression example we will create a Linear Regression model that will try to predict `y` values based upon `x` values.
 
@@ -166,8 +166,6 @@ plt.ylabel("bill_depth_mm")
 plt.legend()
 plt.show()
 ```
-
-![](fig/regress_penguin_lin.png){alt='Comparison of the regressions of our dataset'}
 
 ![Comparison of the regressions of our dataset](../fig/regress_penguin_lin.png)
 
