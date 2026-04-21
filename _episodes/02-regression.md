@@ -49,7 +49,8 @@ We're going to be using the penguins dataset of Allison Horst, published [here](
 
 ![Artwork by @allison_horst](../fig/palmer_penguins.png)
 
-The physical attributes measured are flipper length, beak length, beak width, body mass, and sex.
+The physical attributes measured are flipper length, beak length, beak width, body mass, and sex. This picture shows exactly what bill length and depth correspond to.
+
 ![Artwork by @allison_horst](../fig/culmen_depth.png)
 
 The penguin dataset is available through the Python plotting library [Seaborn](https://seaborn.pydata.org/).
