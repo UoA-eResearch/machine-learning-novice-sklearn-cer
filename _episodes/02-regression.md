@@ -337,9 +337,6 @@ plt.show()
 
 > ## Exercise: Vary your polynomial degree to try and improve fitting
 > Adjust the `degree=2` input variable for the `PolynomialFeatures` function to change the degree of polynomial fit. Can you improve the RMSE of your model?
-> > ## Solution
-> > MAYBE A FIGURE OR TWO. POTENTIALLY SOME CODE TO LOOP OVER POLYNOMIALS.
-> {: .solution}
 {: .challenge}
 
 {% include links.md %}
