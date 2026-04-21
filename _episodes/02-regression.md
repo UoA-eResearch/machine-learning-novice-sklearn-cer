@@ -168,13 +168,6 @@ We can now make new predictions of `bill_depth_mm` for any `body_mass_g` values 
 Let's practice!
 
 ~~~
-# Recreate (or reuse) the training arrays in the shape expected by scikit-learn
-x_data_1, y_data_1 = pre_process_linear(x_data, y_data)
-
-# Fit a fresh linear regression model
-model = LinearRegression(fit_intercept=True)
-lin_regress = model.fit(x_data_1, y_data_1)
-
 # New body mass to predict
 x = 3500
 x_new = np.array(x).reshape(-1, 1)
