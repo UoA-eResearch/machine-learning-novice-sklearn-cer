@@ -55,13 +55,6 @@ The physical attributes measured are flipper length, beak length, beak width, bo
 
 The penguin dataset is available through the Python plotting library [Seaborn](https://seaborn.pydata.org/).
 
-```python
-import seaborn as sns
-
-dataset = sns.load_dataset('penguins')
-dataset.head()
-```
-
 Let's start by loading in and examining the penguin dataset, which containing a few hundred samples and a number of features and labels.
 
 ```python
