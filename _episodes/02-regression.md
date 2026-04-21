@@ -231,6 +231,8 @@ print(f"Interpretation: On the existing plot this would appear at the point ({x}
 > {: .solution}
 {: .challenge}
 
+### Exploring more of the data
+
 Let's provide the model with all of the penguin samples and visually inspect how the linear regression model performs.
 
 ~~~
@@ -261,6 +263,8 @@ Oh dear. It looks like our linear regression fits okay for our subset of the pen
 {: .callout}
 
 ### Polynomial fit
+
+Let's explore a different type of relationship.
 
 Polynomial functions are non-linear functions that are commonly-used to model curvy relationships. Mathematically they have `N` degrees of freedom and they take the following form `y = a + bx + cx^2 + dx^3 ... + mx^N`. If we have a polynomial of degree `N=1` we once again return to a linear equation `y = a + bx` or as it is more commonly written `y = mx + c`.
 
