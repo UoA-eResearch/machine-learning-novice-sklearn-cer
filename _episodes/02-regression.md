@@ -339,4 +339,8 @@ plt.show()
 > Adjust the `degree=2` input variable for the `PolynomialFeatures` function to change the degree of polynomial fit. Can you improve the RMSE of your model?
 {: .challenge}
 
+As we can see, this relationship is still overfitted to the training data.
+
+In the next section we will explore a different type of model that can deal with this type of data more effectively.
+
 {% include links.md %}
